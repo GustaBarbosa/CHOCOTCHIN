@@ -1,0 +1,227 @@
+/* ... (Seu CSS anterior para body, header, menu, etc., permanece o mesmo) ... */
+body {
+  font-family: 'Montserrat', sans-serif; /* Fonte padrão para o corpo */
+}
+
+h1, h2, h3 {
+  font-family: 'Lora', serif; /* Fonte para os títulos */
+}
+/* Estilos para o conteúdo principal */
+.content {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  max-width: 1200px;
+  /* Mantém a largura máxima para o conteúdo principal */
+  margin: 0 auto;
+  /* Centraliza o contêiner do conteúdo */
+}
+
+/* Estilos da seção de descrição do produto */
+.product-description-container {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-description-container h1 {
+  font-size: 2.5rem;
+  color: #4f280b;
+  margin-bottom: 1.5rem;
+}
+
+.product-description {
+  /* Novo wrapper para os parágrafos */
+  max-width: 800px;
+  /* Controla a largura dos parágrafos */
+  margin: 0 auto 1.5rem;
+  /* Centraliza e adiciona margem */
+}
+
+.product-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  text-align: center;
+  /* Centraliza o texto */
+  margin-bottom: 1rem;
+}
+
+.hazelnut-package {
+  height: 100px;
+  /* Mantém o tamanho da imagem da embalagem */
+  width: auto;
+  margin: 2rem auto;
+}
+
+.product-intro {
+  display: flex;
+  /* A magia do Flexbox! */
+  align-items: center;
+  /* Alinha verticalmente a imagem e o texto */
+  gap: 2rem;
+  /* Espaço entre a imagem e o texto */
+  margin-top: 2rem;
+  /* Espaço abaixo do título h1 */
+  text-align: left;
+  /* Alinhar o texto à esquerda fica mais fácil de ler */
+}
+
+.product-intro-image {
+  flex: 1;
+  /* A imagem ocupa uma parte do espaço */
+}
+
+.product-intro-text {
+  flex: 2;
+  /* O texto ocupa duas partes, um pouco mais de espaço */
+}
+
+.hazelnut-package {
+  max-width: 100%;
+  /* Garante que a imagem não ultrapasse seu contêiner */
+  height: auto;
+  border-radius: 10px;
+  /* Adiciona cantos arredondados à imagem do produto */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* Sombra suave para destacar */
+}
+
+/* ---------------------------------- */
+/* ESTILOS PARA IMAGEM DO PRODUTO E TABELA NUTRICIONAL */
+/* ---------------------------------- */
+
+.image-and-table-container {
+  display: flex;
+  /* Habilita flexbox para alinhar lado a lado */
+  flex-wrap: wrap;
+  /* Permite que os itens quebrem para a próxima linha em telas menores */
+  justify-content: center;
+  /* Centraliza os itens quando há espaço */
+  align-items: flex-start;
+  /* Alinha os itens pelo topo */
+  gap: 2rem;
+  /* Espaçamento entre a imagem e a tabela */
+  margin-top: 2rem;
+  /* Espaçamento da seção superior */
+}
+
+.product-image-container {
+  flex: 1;
+  /* Permite que o contêiner da imagem cresça e encolha */
+  min-width: 300px;
+  /* Garante uma largura mínima para a imagem */
+  max-width: 500px;
+  /* Limita a largura máxima da imagem para não ficar enorme */
+  padding: 1rem;
+  /* Espaçamento interno para a imagem */
+  background-color: #fff;
+  /* Fundo branco para o card da imagem */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  /* Transforma em flexbox para centralizar a imagem dentro dele */
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image-container img {
+  max-width: 100%;
+  /* A imagem ocupa 100% do seu contêiner, respeitando o max-width do .product-image-container */
+  height: auto;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); - Removido aqui para evitar sombra dupla se o pai já tem */
+}
+
+.nutritional-info {
+  flex: 1;
+  /* Permite que a tabela cresça e encolha */
+  min-width: 300px;
+  /* Garante uma largura mínima para a tabela */
+  max-width: 600px;
+  /* Limita a largura máxima da tabela */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.nutritional-info h2 {
+  color: #4f280b;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.nutritional-info table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutritional-info th,
+.nutritional-info td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  color: #833711;
+}
+
+.nutritional-info th {
+  background-color: #f1e8d9;
+  font-weight: bold;
+}
+
+.nutritional-info tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.nutritional-info td:first-child {
+  font-weight: 500;
+}
+
+/* Media query para telas menores (mantendo o comportamento vertical) */
+@media (max-width: 900px) {
+  .image-and-table-container {
+    flex-direction: column;
+    /* Coloca os itens em coluna em telas menores */
+    align-items: center;
+    /* Centraliza os itens */
+  }
+
+  .product-image-container,
+  .nutritional-info {
+    width: 90%;
+    /* Ajusta a largura para ocupar mais espaço em telas menores */
+    max-width: none;
+    /* Remove o limite de largura máxima em telas menores */
+  }
+}
+
+/* Avelã dos infernos */
+
+.ingredient {
+  position: fixed;
+  /* Posição fixa em relação à janela do navegador */
+  top: 20px;
+  /* Distância de 20px do topo */
+  left: 20px;
+  /* Distância de 20px da esquerda */
+  height: 60px;
+  /* Altura da imagem */
+  width: auto;
+  /* Largura automática para manter a proporção */
+  z-index: 1001;
+  /* Garante que a imagem fique por cima de tudo (o seu menu é 100) */
+  pointer-events: none;
+  /* Permite clicar através da imagem */
+  opacity: 0.8;
+  /* Opacidade para não atrapalhar a visualização */
+  transition: transform 0.3s ease;
+  /* Animação suave ao mover */
+}
