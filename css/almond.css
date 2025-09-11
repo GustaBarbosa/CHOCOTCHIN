@@ -1,0 +1,104 @@
+#janela-modal {
+  padding-top: 150px;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: none;
+  max-height: fit-content;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.sem-rolagem {
+  overflow: hidden;
+}
+
+.conteudo-janela {
+  background-image: url("../img/lyrics-background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  text-align: center;
+  color: #333;
+
+  /* Remova as dimensões fixas para que ele se ajuste ao conteúdo */
+  width: 650px; /* Mantém a largura fixa */
+  min-height: 650px; /* Define uma altura mínima, mas permite que cresça */
+  margin: 50px 50px;
+  /* Ajuste o preenchimento para que o texto não "grude" nas bordas do pergaminho */
+  padding: 300px 90px;
+}
+
+.conteudo-janela h2 {
+  padding-top: 0;
+  color: #4f280b;
+}
+
+.conteudo-janela p {
+  margin: 0;
+}
+
+.player-overplay {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.player-music {
+  display: flex; /* coloca as divs lado a lado */
+}
+
+#lyrics {
+  border: none;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+  height: calc(486px / 4); /* metade da altura */
+  width: calc(556px / 4); /* metade da largura de um frame */
+  /* Posicionamento para o elemento filho */
+  position: relative;
+  overflow: hidden; /* Garante que o span não "vaze" para fora do botão */
+}
+
+#lyrics img {
+  cursor: pointer;
+  height: calc(486px / 4); /* metade da altura */
+}
+
+.personagem-animado {
+  width: calc(556px / 4); /* metade da largura de um frame */
+  height: calc(486px / 4); /* metade da altura */
+  background-repeat: no-repeat;
+  background-size: calc(6672px / 4) auto; /* escala proporcional da spritesheet */
+  cursor: pointer;
+}
+
+/* Imagem parada */
+.personagem-parado {
+  background-image: url("../img/taylor-dancep.png");
+  background-size: cover;
+}
+
+/* Animação com spritesheet */
+.personagem-animado.playing {
+  background-image: url("../img/taylor-dance.png");
+  animation: animarPersonagem 5s steps(12) infinite;
+  background-size: calc(6672px / 4) auto; /* reduz a spritesheet proporcionalmente */
+}
+
+@keyframes animarPersonagem {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: calc(-6672px / 4) 0;
+  }
+}

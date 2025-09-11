@@ -1,0 +1,231 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/motivation.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  background-color: #f1e8d9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header {
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #efe0c4;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 250px;
+  margin-top: 1rem 0;
+  text-align: center;
+}
+
+#janela-modal {
+  padding-top: 150px;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: none;
+  max-height: fit-content;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.sem-rolagem {
+  overflow: hidden;
+}
+
+.conteudo-janela {
+  background-image: url("../img/lyrics-strawberry-background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  text-align: center;
+  color: #333;
+
+  width: 1000px; /* Mantém a largura fixa */
+  height: 1150px; /* Define uma altura mínima, mas permite que cresça */
+  margin: 90px 90px;
+  margin-top: 800px;
+  padding: 300px 120px;
+  padding-top: 250px;
+}
+
+.conteudo-janela h2 {
+  padding-top: 0;
+  color: #4f280b;
+}
+
+.conteudo-janela p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.player-overplay {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.player-music {
+  display: flex; /* coloca as divs lado a lado */
+}
+
+#lyrics {
+  border: none;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+  height: calc(506px / 4); /* metade da altura */
+  width: calc(532px / 4); /* metade da largura de um frame */
+  /* Posicionamento para o elemento filho */
+  position: relative;
+  overflow: hidden; /* Garante que o span não "vaze" para fora do botão */
+}
+
+#lyrics img {
+  cursor: pointer;
+  height: calc(506px / 4); /* metade da altura */
+}
+
+.personagem-animado {
+  width: calc(532px / 4); /* metade da largura de um frame */
+  height: calc(506px / 4); /* metade da altura */
+  background-repeat: no-repeat;
+  background-size: calc(4256px / 4) auto; /* escala proporcional da spritesheet */
+  cursor: pointer;
+}
+
+/* Imagem parada */
+.personagem-parado {
+  background-image: url("../img/strawberry-standing.png");
+  background-size: cover;
+}
+
+/* Animação com spritesheet */
+.personagem-animado.playing {
+  background-image: url("../img/strawberry-sprite.png");
+  animation: animarPersonagem 3s steps(8) infinite;
+  background-size: calc(4256px / 4) auto; /* reduz a spritesheet proporcionalmente */
+}
+
+@keyframes animarPersonagem {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: calc(-4256px / 4) 0;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: auto; /* mantém a proporção original */
+}
+
+.menu {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: #4f280b;
+  padding: 0.5rem 0;
+  position: relative;
+  z-index: 100;
+}
+
+.menu-item {
+  position: relative;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.menu-title {
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu-item:hover .menu-title {
+  color: #ffcc00;
+}
+
+.menu-item:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-content {
+  border-radius: 5px;
+  display: none;
+  /* Inicia oculto */
+  position: absolute;
+  background-color: #4f280b;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+  /* Posiciona o menu abaixo do título */
+  left: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #69360f;
+  border-radius: 5px;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+.product-intro-text p {
+  font-weight: normal;
+  color: #2e180b;
+}

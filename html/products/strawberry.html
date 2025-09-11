@@ -2,147 +2,284 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chocotchin - Almond</title>
-    <link rel="stylesheet" href="../../css/style.css" />
-    <link rel="stylesheet" href="../../css/products.css" />
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chocotchin - Hazelnuts</title>
+  <link rel="stylesheet" href="../../css/strawberry.css" />
+  <link rel="stylesheet" href="../../css/products.css" />
+          <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 
 <body>
-    <header>
-        <img class="ingredient" style="background-attachment: fixed" src="/img/almond.png" alt="Chocotchin Almond" />
-    </header>
+  <header>
+    <img class="logo" src="../../img/head.png" alt="logo" />
+    <img class="ingredient" src="../../img/ai-generated-3d-strawberry-fruit-png.png" alt="hazelnut" />
+  </header>
 
-    <nav class="menu">
-        <div class="menu-item">
-            <a href="../../index.html"><span class="menu-title">Home</span></a>
-        </div>
+  <nav class="menu">
+    <div class="menu-item">
+      <a href="../../index.html"><span class="menu-title">Home</span></a>
+    </div>
 
-        <div class="menu-item">
-            <span class="menu-title">Products</span>
-            <div class="dropdown-content">
-                <a href="hazelnut.html">Hazelnut</a>
-                <a href="almond.html">Almond</a>
-                <a href="strawberry.html">Strawberry</a>
+    <div class="menu-item">
+      <span class="menu-title">Products</span>
+      <div class="dropdown-content">
+        <a href="hazelnut.html">Hazelnut</a>
+        <a href="almond.html">Almond</a>
+        <a href="strawberry.html">Strawberry</a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <span class="menu-title">About us</span>
+      <div class="dropdown-content">
+        <a href="../aboutUs/story.html">Story</a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <a href="../../html/peopleWeLove.html"><span class="menu-title">People we love</span></a>
+    </div>
+  </nav>
+
+  <main class="content">
+    <div style="background-image: url(../../img/background-strawberry.png)" class="product-description-container">
+      <div class="background-style" style="background-color: #9a8272ab">
+        <h1>CHOCOTCHIN STRAWBERRY</h1>
+
+        <div class="product-intro">
+          <div class="player-overplay">
+            <div class="player-music">
+
+              <div class="personagem-animado personagem-parado"></div>
+              <button id="lyrics"></span><img src="../../img/lyrics-strawberry.png" alt=""></button>
+              <div id="janela-modal">
+                <div class="conteudo-janela">
+                  <h2>Red</h2>
+
+                  
+<p class="primeiraLinha">
+  Today I woke up willing to go back to bed<br>
+I wonder why I just exist on the future and past<br>
+where can't I connect where I am now?<br>
+I just wanna escape from these thoughts somehow<br><br>
+  I walk to work but I can't fake<br>
+Everybody can notice it on my face<br>
+Today it's not my day<br>
+When am I gonna be happy?</p>
+<p>&nbsp; </p>
+<p class="primeiraLinha">When am I<br>
+Gonna be<br>
+Happy again?<br>
+Why am I<br>
+Stuck on a<br>
+Circle of sadness?<br>
+Will I<br>
+Get out of here someday?<br>
+All I see is red<br>
+But not in a good way</p>
+<p>&nbsp; </p>
+<p class="primeiraLinha">I saw a friend at noon<br>
+He said time will make it through<br>
+Before he goes he gave me a chocotchin<br>
+And said see you soon<br>
+Then I saw written on it<br>
+I took it easy on myself, will you?</´pclass=>
+<p>&nbsp; </p>
+<p class="segundaLinha">When will I<br>
+Take it easy<br>
+On me?<br>
+Why do I<br>
+Ever forget<br>
+My limits?<br>
+I can't be<br>
+Always fearless<br>
+All I see is red<br>
+But i'm ready to take a step</p>
+<p>&nbsp; </p>
+<p class="segundaLinha">When I drown in doubt<br>
+I have to remember<br>
+Everybody struggles to smile<br>
+Sometimes</p>
+<p>&nbsp; </p>
+<p class="segundaLinha">I have to do what's necessary<br>
+Everything is momentary<br>
+Forever is just a lie<br>
+Chocotchin will remind</p>
+<p>&nbsp; </p>
+<p class="segundaLinha">Now I'm in a<br>
+State of mind<br>
+So cozy<br>
+I took a<br>
+Time to realize<br>
+It's just a moment<br>
+It doesnt matter<br>
+How much I'll feel the ache<br>
+All I see is red<br>
+Because I learned to take a break<br>
+And take it easy on myself</p>
+                </div>
+              </div>
+
+
+
+              <script>
+
+                const botaoAbrir = document.getElementById('lyrics');
+                const janelaModal = document.getElementById('janela-modal');
+                const conteudoJanela = document.querySelector('.conteudo-janela');
+                const body = document.body;
+
+                botaoAbrir.addEventListener('click', () => {
+                  janelaModal.style.display = 'flex';
+                  body.classList.add('sem-rolagem');
+                });
+
+                janelaModal.addEventListener('click', (evento) => {
+                  if (!conteudoJanela.contains(evento.target)) {
+                    janelaModal.style.display = 'none';
+                    body.classList.remove('sem-rolagem');
+                  }
+                });
+
+                // animação dançando do hamster e tocar player de música
+
+                document.addEventListener('DOMContentLoaded', function () {
+                  const personagem = document.querySelector('.personagem-animado');
+                  const audio = new Audio('../../audio/strawberry-song.mp3');
+                  let isPlaying = false;
+
+                  personagem.addEventListener('click', function () {
+                    if (isPlaying) {
+                      audio.pause();
+                      personagem.classList.remove('playing');
+                      personagem.classList.add('personagem-parado');
+                    } else {
+                      audio.play();
+                      personagem.classList.remove('personagem-parado');
+                      personagem.classList.add('playing');
+                    }
+                    isPlaying = !isPlaying;
+                  });
+
+                  audio.addEventListener('ended', function () {
+                    isPlaying = false;
+                    personagem.classList.remove('playing');
+                    personagem.classList.add('personagem-parado');
+                  });
+                });
+              </script>
+
             </div>
-        </div>
 
-        <div class="menu-item">
-            <span class="menu-title">About us</span>
-            <div class="dropdown-content">
-                <a href="../aboutUs/story.html">Story</a>
-                <a href="../aboutUs/team.html">Team</a>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <a href="../Contacts/contacts.html"><span class="menu-title">Contacts</span></a>
-        </div>
-    </nav>
-
-    <main class="content">
-        <div class="product-description-container">
-            <h1>Chocotchin strawberry</h1>
-
-            <audio controls>
-                <source src="/audio/vencendo_mais.mp3-combine.mp3" type="audio/mpeg" />
-            </audio>
+            <img class="almond-package" src="../../img/strawberry-package.png" alt="hazelnut-package" />
+          </div>
+          <div class="product-intro-text">
             <p>
-                Our Serenity Strawberry protein bar is a delicious embrace for your body and mind. Each bite is a soft,
-                comforting experience, where the sweet, sun-ripened flavor of strawberry meets a powerful blend of
-                nutrients designed to uplift your spirit. Made with the finest, carefully selected ingredients, it's the
-                perfect choice for anyone seeking a moment of peace in their day.
-
-                The Serenity Strawberry bar is ideal for a mindful snack, a gentle boost to your well-being, or a
-                supportive treat when you need it most. We've thoughtfully infused each bar with Tryptophan and
-                L-Theanine to promote a positive outlook, while Passiflora extract provides a touch of tranquility. With
-                added probiotics to support inner balance, this bar creates a perfect harmony of delicious taste and
-                holistic wellness that you will truly cherish.
+              Our Strawberry Protein Chocolate is a heavenly fusion of creamy premium cocoa and the refreshing sweetness
+              of strawberries. Each bite delivers a smooth and satisfying experience, enriched with L-Theanine and
+              Tryptophan — ingredients known to support relaxation and well-being. With no added sugar, it’s the perfect
+              balance between indulgence and health.
             </p>
             <p>
-                The Serenity Strawberry bar is ideal for a mindful break, as a supportive boost to your spirit, or as a
-                thoughtful gesture of care. Its unique wellness blend of Tryptophan, L-Theanine, and Passiflora,
-                combined with our nourishing protein and gut-friendly probiotics, creates a perfect harmony of flavor
-                and function that your body and mind will cherish.
+Chocotchin Strawberry Protein is ideal when you're feeling stressed, anxious, or simply need a moment to pause. The protein bar and 
+its packaging features a unique texture, and every time you enjoy a Strawberry Chocotchin, you'll be reminded that every problem is 
+temporary—just like the last time you had one, when everything faded away and life returned to normal.
             </p>
+            <p>Take it easy, take a Strawberry Chocotchin.</p>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div class="image-and-table-container">
-            <div class="product-image-container"></div>
+    <div class="image-and-table-container">
+      <div class="product-image-container">
+        <img style="width: 400px; height: 610px" src="../../img/moranguete.png"
+          alt="Chocotchin Hazelnuts" />
+      </div>
 
-            <div class="nutritional-info">
-                <h2>Nutritional Information</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Component</th>
-                            <th>Per 90 g</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Energy Value</td>
-                            <td>185 kcal (774 kJ)</td>
-                        </tr>
-                        <tr>
-                            <td>Lipids</td>
-                            <td>11 g</td>
-                        </tr>
-                        <tr>
-                            <td>– of which saturated fatty acids</td>
-                            <td>6 g</td>
-                        </tr>
-                        <tr>
-                            <td>– of which trans fatty acids</td>
-                            <td>0 g</td>
-                        </tr>
-                        <tr>
-                            <td>Carbohydrates</td>
-                            <td>38 g</td>
-                        </tr>
-                        <tr>
-                            <td>– of which sugars</td>
-                            <td>3 g</td>
-                        </tr>
-                        <tr>
-                            <td>– of which polyols</td>
-                            <td>17 g</td>
-                        </tr>
-                        <tr>
-                            <td>– of which added sugars</td>
-                            <td>0 g</td>
-                        </tr>
-                        <tr>
-                            <td>Dietary Fiber</td>
-                            <td>7 g</td>
-                        </tr>
-                        <tr>
-                            <td>Proteins</td>
-                            <td>22 g</td>
-                        </tr>
-                        <tr>
-                            <td>Salt (sodium equivalent)</td>
-                            <td>25 mg</td>
-                        </tr>
-                        <tr>
-                            <td>Korean Ginseng Extract</td>
-                            <td>200 mg</td>
-                        </tr>
-                        <tr>
-                            <td>– of which Total Ginsenosides</td>
-                            <td>40 mg</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </main>
+      <div class="nutritional-info">
+        <h2>Nutritional Information</h2>
+    <table>
+  <thead>
+    <tr>
+      <th>Nutrition Facts</th>
+      <th>Per 90g Serving</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Energy</td>
+      <td>216 kcal (904 kJ)</td>
+    </tr>
+    <tr>
+      <td>Fat</td>
+      <td>11 g</td>
+    </tr>
+    <tr>
+      <td>&nbsp;&nbsp;- of which saturates</td>
+      <td>6 g</td>
+    </tr>
+    <tr>
+      <td>Carbohydrate</td>
+      <td>22 g</td>
+    </tr>
+    <tr>
+      <td>&nbsp;&nbsp;- of which sugars</td>
+      <td>1.5 g</td>
+    </tr>
+    <tr>
+      <td>&nbsp;&nbsp;- of which polyols</td>
+      <td>12 g</td>
+    </tr>
+    <tr>
+      <td>&nbsp;&nbsp;- of which added sugars</td>
+      <td>0 g</td>
+    </tr>
+    <tr>
+      <td>Fibre</td>
+      <td>8 g</td>
+    </tr>
+    <tr>
+      <td>Protein</td>
+      <td>20 g</td>
+    </tr>
+    <tr>
+      <td>Salt</td>
+      <td>0.15 g</td>
+    </tr>
+    <tr>
+      <td>L-Tryptophan</td>
+      <td>250 mg</td>
+    </tr>
+    <tr>
+      <td>L-Theanine</td>
+      <td>150 mg</td>
+    </tr>
+    <tr>
+  <td>Bifidobacterium</td>
+  <td>100 million CFU*</td>
+</tr>
+  </tbody>
+</table>
+      </div>
+    </div>
+  </main>
 
-    <footer>
-        <p>&copy; AGORA ENVOLVIDO COM PAPEL 200% RECICLAVEL!!.</p>
+  <footer>
+    <p>&copy; Sustainably wrapped in 200% recyclable paper!</p>
+          <a style="outline: none;
+  box-shadow: none; border: none; color: white; text-decoration: none;
+" href="https://www.instagram.com/chocotchin" target="_blank"><i class="fa-brands fa-instagram"></a></i><i class="fa-brands fa-facebook"></i
+      ><i class="fa-brands fa-x-twitter"></i>
     </footer>
+  </footer>
 </body>
 
 </html>

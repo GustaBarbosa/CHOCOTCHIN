@@ -1,3 +1,4 @@
+/* Existing CSS (do not change) */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -10,19 +11,30 @@ body {
 }
 
 header {
-  background-image: url("/img/head.png");
-  background-size: 100vh;
+  display: flex;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f1e8d9;
   color: white;
+  justify-content: center;
+  align-items: center;
   height: 250px;
-  padding: 1rem 0;
+  margin-top: 1rem 0;
   text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: auto;
 }
 
 .menu {
   display: flex;
+  height: 40px;
+  align-items: center;
   justify-content: center;
   background-color: #4f280b;
   padding: 0.5rem 0;
@@ -46,17 +58,21 @@ header {
   color: #ffcc00;
 }
 
+.menu-item:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .dropdown-content {
   border-radius: 5px;
   display: none;
-  /* Inicia oculto */
   position: absolute;
   background-color: #4f280b;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   top: 100%;
-  /* Posiciona o menu abaixo do título */
   left: 0;
   opacity: 0;
   transform: translateY(-10px);
@@ -76,16 +92,11 @@ header {
   border-radius: 5px;
 }
 
-.menu-item:hover .dropdown-content {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .content {
   flex: 1;
   padding: 2rem;
   text-align: center;
+  background-color: #f1e8d9;
 }
 
 a {
@@ -98,4 +109,381 @@ footer {
   text-align: center;
   padding: 1rem 0;
   margin-top: auto;
+}
+
+/* --- New CSS for the humorous section (Chocotchin page only) --- */
+.chocotchin-humor-section {
+  background-color: #fbf9f7; /* A light background for this section */
+  padding: 40px 20px;
+  margin-top: 40px;
+  border-top: 1px solid #eee; /* A subtle separator */
+  text-align: center;
+}
+
+.humor-content-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically by default */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px; /* Space before the additional text */
+}
+
+.humor-image {
+  max-width: 250px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 8px; /* Slightly rounded corners for the image */
+  margin-bottom: 20px; /* Space between image and text */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+}
+
+.humor-text {
+  font-size: 1.6em; /* Make the joke text prominent */
+  color: #a04020; /* A darker, warmer brown for emphasis */
+  font-weight: bold;
+  margin: 0; /* Remove default paragraph margins */
+  max-width: 600px; /* Limit width for readability */
+}
+
+.additional-text p {
+  font-size: 1.1em;
+  color: #6a3015; /* A slightly lighter brown for the follow-up text */
+  line-height: 1.6;
+  max-width: 700px; /* Limit width for readability */
+  margin: 0 auto; /* Center the text block */
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+  .humor-content-wrapper {
+    flex-direction: row; /* Image and text side-by-side on larger screens */
+    gap: 30px; /* Space between image and text */
+  }
+
+  .humor-image {
+    margin-bottom: 0; /* Remove bottom margin when side-by-side */
+  }
+
+  .humor-text {
+    text-align: left; /* Align text left when next to image */
+  }
+}
+
+/* --- CSS para a Seção de Avaliações de Clientes --- */
+
+.ratings-section {
+  padding: 50px 20px;
+  background-color: #f1e8d9; /* Cor de fundo suave que combina com o header */
+  margin-top: 40px;
+  text-align: center;
+}
+
+.ratings-title {
+  font-size: 2.2em;
+  color: #4f280b; /* Cor principal do menu */
+  margin-bottom: 40px;
+}
+
+.ratings-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Espaço entre os cards */
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o grid */
+}
+
+.rating-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: calc(33.333% - 30px); /* 3 cards por linha */
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start; /* Alinha a imagem e o texto no topo */
+  text-align: left;
+  min-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rating-card:hover {
+  transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.customer-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; /* Deixa a imagem redonda */
+  object-fit: cover; /* Garante que a imagem não fique distorcida */
+  margin-right: 20px;
+  flex-shrink: 0; /* Impede que a imagem encolha */
+  border: 3px solid #fff7dd;
+}
+
+.rating-info {
+  flex-grow: 1;
+}
+
+.customer-name {
+  margin: 0 0 5px 0;
+  font-size: 1.3em;
+  color: #7b4f3b; /* Um tom de castanho elegante */
+}
+
+.star-rating {
+  font-size: 1.2em;
+  color: #ffd700; /* Cor dourada para as estrelas */
+  margin-bottom: 10px;
+}
+
+.customer-comment {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+  font-style: italic;
+}
+
+/* --- Responsividade para a Seção de Avaliações --- */
+
+@media (max-width: 900px) {
+  .rating-card {
+    width: calc(50% - 30px); /* 2 cards por linha em telas médias */
+  }
+}
+
+@media (max-width: 600px) {
+  .rating-card {
+    width: 100%; /* 1 card por linha em telas pequenas */
+    flex-direction: column; /* Imagem fica em cima do texto */
+    align-items: center; /* Centraliza tudo no modo coluna */
+    text-align: center;
+  }
+
+  .customer-photo {
+    margin-right: 0;
+    margin-bottom: 15px; /* Espaço entre a foto e o nome */
+  }
+}
+
+/* --- ESTILOS ADICIONAIS PARA A NOVA HOMEPAGE --- */
+
+main {
+  padding: 0;
+}
+
+main > section {
+  padding: 50px 20px;
+}
+.section-title {
+  font-size: 2.2em;
+  color: #4f280b;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* --- 1. Estilos da Hero Section --- */
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/chocolatepp.png");
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px; /* Adicionado padding para segurança em telas pequenas */
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.3em;
+  max-width: 600px;
+  margin-bottom: 1.5em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-btn {
+  background-color: #a04020;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #7b4f3b;
+  transform: scale(1.05);
+}
+
+/* --- 2. Estilos dos Produtos em Destaque --- */
+.featured-products-section {
+  background-color: #fff; /* Fundo branco para destacar os produtos */
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: #fbf9f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: calc(33.333% - 30px);
+  min-width: 280px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f1e8d9;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.5em;
+  color: #4f280b;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.5;
+  min-height: 60px; /* Garante que os cards tenham a mesma altura */
+}
+
+.product-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #4f280b;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.product-btn:hover {
+  background-color: #69360f;
+}
+
+/* --- Ajustes de Responsividade para as Novas Seções --- */
+@media (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+  .product-card {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2em;
+  }
+  .hero-content p {
+    font-size: 1.1em;
+  }
+  .product-card {
+    width: 100%;
+  }
+}
+
+.chocotchin-humor-section,
+.ratings-section {
+  margin-top: 0; /* Remove a margem extra pois o espaçamento agora é pelo padding */
+}
+
+/* --- Additional CSS for the Story Page --- */
+
+.story-container {
+  max-width: 900px;
+  margin: 40px auto; /* Adds top and bottom margin */
+  background-color: #fbf9f7;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Ensures the image respects the rounded corners */
+}
+
+.story-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.story-text {
+  padding: 40px;
+  text-align: left;
+}
+
+.story-text h1 {
+  font-size: 2.5em;
+  color: #4f280b;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.story-text p {
+  font-size: 1.1em;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* --- Class to Vertically Center Content on Short Pages --- */
+/* This will only affect pages with <body class="center-vertically"> */
+body.center-vertically .content {
+  display: flex;
+  flex: 1; /* Allows 'main' to fill available space */
+  flex-direction: column;
+  justify-content: center; /* Vertically aligns the content */
+  align-items: center; /* Horizontally aligns the content */
+}
+
+/* --- Media Query for Story Page on Small Screens --- */
+@media (max-width: 600px) {
+  .story-text {
+    padding: 30px;
+  }
+  .story-text h1 {
+    font-size: 2em;
+  }
 }

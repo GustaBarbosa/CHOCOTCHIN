@@ -1,0 +1,93 @@
+.friends-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-image: url("../img/amigos.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f1e8d9;
+}
+
+/* O título <h2>A Nossa Equipa Incrível!</h2> foi removido, então este CSS não é mais necessário */
+/* .friends-section h2 {
+  font-size: 2.5em;
+  color: #5a2e1e;
+  margin-bottom: 40px;
+} */
+
+.p {
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.friends-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.friend-card {
+  display: flex;
+  /* Removido align-items: center; para permitir que a imagem e o texto se alinhem ao topo se for um card mais alto */
+  background-color: #ffffff75;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: calc(33% - 40px); /* Mantém 3 cards por linha */
+  box-sizing: border-box;
+  text-align: left;
+  min-width: 280px; /* Largura mínima para evitar que fiquem muito pequenos */
+}
+
+.friend-card img {
+  width: 120px; /* Aumenta a largura da imagem */
+  height: auto; /* Deixa a altura se ajustar proporcionalmente, resultando em retangular */
+  object-fit: contain; /* Garante que a imagem inteira seja visível, sem corte */
+  border-radius: 9px; /* Mantém os cantos levemente arredondados */
+  margin-right: 15px;
+  flex-shrink: 0;
+  border: 1px solid #ddd; /* Borda sutil para dar um contorno */
+  padding: 5px; /* Espaço entre a borda e a imagem */
+  background-color: #fff7ddd1; /* Fundo claro para a imagem */
+}
+
+.friend-info {
+  flex-grow: 1;
+}
+
+.friend-info h3 {
+  font-size: 1.4em; /* Levemente maior */
+  color: #7b4f3b;
+  margin-top: 0;
+  margin-bottom: 8px; /* Mais espaço abaixo do nome */
+}
+
+.friend-info p {
+  font-size: 1em; /* Levemente maior */
+  color: #4c3217;
+  line-height: 1.5;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+  .friend-card {
+    width: calc(50% - 30px); /* 2 cards por linha em telas médias */
+  }
+}
+
+@media (max-width: 600px) {
+  .friend-card {
+    width: 100%; /* 1 card por linha em telas pequenas */
+    flex-direction: column; /* Imagem acima do texto em telas pequenas */
+    text-align: center;
+  }
+  .friend-card img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}

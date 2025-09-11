@@ -1,39 +1,76 @@
 /* ... (Seu CSS anterior para body, header, menu, etc., permanece o mesmo) ... */
-body {
-  font-family: 'Montserrat', sans-serif; /* Fonte padrão para o corpo */
+@font-face {
+  font-family: "titulo";
+  src: url("../font/Nunito-Black.ttf") format("truetype");
 }
 
-h1, h2, h3 {
-  font-family: 'Lora', serif; /* Fonte para os títulos */
+@font-face {
+  font-family: "corpo";
+  src: url("../font/Quicksand-SemiBold.ttf") format("truetype");
 }
+
+/* body {
+   font-family: "corpo", sans-serif;
+} */
+
+h1,
+h2,
+h3 {
+  font-family: "titulo", serif;
+  font-weight: bolder;
+  /* Fonte para os títulos */
+}
+
 /* Estilos para o conteúdo principal */
 .content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
-  text-align: center;
   max-width: 1200px;
   /* Mantém a largura máxima para o conteúdo principal */
   margin: 0 auto;
   /* Centraliza o contêiner do conteúdo */
 }
 
-/* Estilos da seção de descrição do produto */
+.almond-package {
+  border: none;
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  /* Adiciona cantos arredondados à imagem do produto */
+}
+
 .product-description-container {
+  background-size: cover;
+  /* Faz a imagem cobrir toda a área */
+  background-position: center;
+  /* Centraliza a imagem */
   padding: 2rem;
-  background-color: #fff;
   border-radius: 50px;
+  border: #4f280ba4;
+  border-style: solid;
+  border-width: 1px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
+.background-style {
+  padding: 2rem;
+  /* Adicionado para dar espaço interno à caixa de texto */
+  border-radius: 20px;
+  /* Bordas arredondadas para a caixa de texto */
+}
+
 .product-description-container h1 {
   font-size: 2.5rem;
   color: #4f280b;
-  margin-bottom: 1.5rem;
+  margin: 0px;
 }
 
 .product-description {
@@ -79,6 +116,8 @@ h1, h2, h3 {
 }
 
 .product-intro-text {
+  font-size: 20px;
+  color: #452e1c;
   flex: 2;
   /* O texto ocupa duas partes, um pouco mais de espaço */
 }
@@ -89,8 +128,6 @@ h1, h2, h3 {
   height: auto;
   border-radius: 10px;
   /* Adiciona cantos arredondados à imagem do produto */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  /* Sombra suave para destacar */
 }
 
 /* ---------------------------------- */
@@ -99,32 +136,24 @@ h1, h2, h3 {
 
 .image-and-table-container {
   display: flex;
-  /* Habilita flexbox para alinhar lado a lado */
   flex-wrap: wrap;
-  /* Permite que os itens quebrem para a próxima linha em telas menores */
   justify-content: center;
-  /* Centraliza os itens quando há espaço */
   align-items: flex-start;
-  /* Alinha os itens pelo topo */
-  gap: 2rem;
-  /* Espaçamento entre a imagem e a tabela */
-  margin-top: 2rem;
-  /* Espaçamento da seção superior */
-}
-
-.product-image-container {
-  flex: 1;
-  /* Permite que o contêiner da imagem cresça e encolha */
-  min-width: 300px;
-  /* Garante uma largura mínima para a imagem */
-  max-width: 500px;
-  /* Limita a largura máxima da imagem para não ficar enorme */
-  padding: 1rem;
-  /* Espaçamento interno para a imagem */
+  max-width: 1000px;
+  margin-top: 30px;
   background-color: #fff;
   /* Fundo branco para o card da imagem */
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-container {
+  position: relative; /* Essencial para que o player seja posicionado em relação a este container */
+  height: 650px;
+  width: 420px;
+  padding: 1rem;
+  /* Espaçamento interno para a imagem */
+
   display: flex;
   /* Transforma em flexbox para centralizar a imagem dentro dele */
   justify-content: center;
@@ -138,24 +167,22 @@ h1, h2, h3 {
   border-radius: 8px;
   /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); - Removido aqui para evitar sombra dupla se o pai já tem */
 }
-
 .nutritional-info {
   flex: 1;
   /* Permite que a tabela cresça e encolha */
-  min-width: 300px;
+  align-self: center;
+  min-width: 400px;
   /* Garante uma largura mínima para a tabela */
-  max-width: 600px;
+  max-width: 500px;
   /* Limita a largura máxima da tabela */
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
 }
 
 .nutritional-info h2 {
   color: #4f280b;
   font-size: 1.8rem;
-  margin-bottom: 1rem;
+  margin: 2rem;
   text-align: center;
 }
 
@@ -166,8 +193,9 @@ h1, h2, h3 {
 
 .nutritional-info th,
 .nutritional-info td {
+  font-size: 17px;
   border: 1px solid #ddd;
-  padding: 12px;
+  padding: 8px;
   text-align: left;
   color: #833711;
 }

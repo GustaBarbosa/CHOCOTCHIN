@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -7,15 +6,21 @@
   <title>Chocotchin - Hazelnuts</title>
   <link rel="stylesheet" href="../../css/style.css" />
   <link rel="stylesheet" href="../../css/products.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Montserrat:wght@400;700&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="../../css/hazelnut.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 
 <body>
-  <header>
-    <img class="ingredient" src="/img/hazelnut.png" alt="hazelnut" />
+  <header><img class="logo" src="../../img/head.png" alt="logo" />
+    <img class="ingredient" src="../../img/hazelnut.png" alt="hazelnut" />
   </header>
 
   <nav class="menu">
@@ -26,133 +31,234 @@
     <div class="menu-item">
       <span class="menu-title">Products</span>
       <div class="dropdown-content">
-        <a href="hazelnut.html">Hazelnut</a>
-        <a href="almond.html">Almond</a>
-        <a href="strawberry.html">Strawberry</a>
+        <a href="../../html/products/hazelnut.html">Hazelnuts</a>
+        <a href="../../html/products/almond.html">Almond</a>
+        <a href="../../html/products/strawberry.html">Strawberry</a>
       </div>
     </div>
 
     <div class="menu-item">
       <span class="menu-title">About us</span>
       <div class="dropdown-content">
-        <a href="../aboutUs/story.html">Story</a>
-        <a href="../aboutUs/team.html">Team</a>
+        <a href="../../html/aboutUs/story.html">Story</a>
       </div>
     </div>
 
     <div class="menu-item">
-      <a href="../Contacts/contacts.html"><span class="menu-title">Contacts</span></a>
+      <a href="../../html/peopleWeLove.html">
+        <span class="menu-title">People we love</span>
+      </a>
     </div>
   </nav>
 
   <main class="content">
-    <div class="product-description-container">
-      <h1>Chocotchin Hazelnuts</h1>
-      <p>Our hazelnut truffle is a divine combination...</p>
-      <img class="hazelnut-package" src="/img/hazelnut-package.png" alt="hazelnut-package" />
-      <p>The Chocotchin Hazelnuts is ideal for a quick snack...</p>
-    </div>
+    <div style="background-image: url(../../img/background-hazelnut.png)" class="product-description-container">
+      <div class="background-style" style="background-color: rgba(230, 205, 175, 0.7)">
+        <h1>CHOCOTCHIN HAZELNUT</h1>
 
-    <div class="product-description-container">
-      <h1>Chocotchin Hazelnuts</h1>
+        <div class="product-intro">
+          <div class="player-overplay">
+            <div class="player-music">
 
-      <div class="product-intro">
-        <div class="product-intro-image">
-          <img class="hazelnut-package" src="/img/hazelnut-package.png" alt="hazelnut-package" />
-        </div>
-        <div class="product-intro-text">
-          <p>
-            Our hazelnut truffle is a divine combination of premium chocolate and
-            crunchy hazelnuts. Each bite is a rich and unforgettable experience,
-            with the unmistakable flavor of chocolate and the delightful texture
-            of hazelnuts. Made with high-quality ingredients, it is the perfect
-            choice for chocolate and hazelnut lovers.
-          </p>
-          <p>
-            The Chocotchin Hazelnuts is ideal for a quick snack, to share with
-            family, or as a special gift. Hazelnuts, rich in nutrients, combined
-            with our carefully selected chocolate, create a harmony of flavor and
-            health that pleases all palates.
-          </p>
+              <div class="personagem-animado personagem-parado"></div>
+              <button id="lyrics"></span><img src="../../img/lyrics-hazelnut.png" alt=""></button>
+              <div id="janela-modal">
+                <div class="conteudo-janela">
+                  <h2>Mouth-watering</h2>
+                  <p>
+                    When push ups are not enough<br>
+                    Take a Chocotchin so you can feel tough<br>
+                    Load up the weight, I say<br>
+                    Take a bite to be great<br><br>
+
+                    Be a star, keep your mind up<br>
+                    Eat protein bar filled with hazelnut<br>
+                    Melts with flavor, fuels with power<br>
+                    Makes you stronger, your mouth is watering<br><br>
+
+                    It takes one bite to 20 grams of protein<br>
+                    Ginseng extract makes you feel like flying<br>
+                    No added sugars, but the taste still lingers in it<br>
+                    You can’t resist it, just try it<br><br>
+
+                    Everybody who could see could guess<br>
+                    Take off the stress with a bit of this<br>
+                    Creamy inside, vicious to mind<br>
+                    Open your mouth wide, it doesn't matter the time<br><br>
+
+                    Be a star, keep your mind up<br>
+                    Eat protein bar filled with hazelnut<br>
+                    Melts with flavor, fuels with power<br>
+                    Makes you stronger, your mouth is watering
+                  </p>
+                </div>
+              </div>
+
+
+
+              <script>
+
+                const botaoAbrir = document.getElementById('lyrics');
+                const janelaModal = document.getElementById('janela-modal');
+                const conteudoJanela = document.querySelector('.conteudo-janela');
+                const body = document.body;
+
+                botaoAbrir.addEventListener('click', () => {
+                  janelaModal.style.display = 'flex';
+                  body.classList.add('sem-rolagem');
+                });
+
+                janelaModal.addEventListener('click', (evento) => {
+                  if (!conteudoJanela.contains(evento.target)) {
+                    janelaModal.style.display = 'none';
+                    body.classList.remove('sem-rolagem');
+                  }
+                });
+
+                // animação dançando do hamster e tocar player de música
+
+                document.addEventListener('DOMContentLoaded', function () {
+                  const personagem = document.querySelector('.personagem-animado');
+                  const audio = new Audio('../../audio/hazelnut-song.mp3');
+                  let isPlaying = false;
+
+                  personagem.addEventListener('click', function () {
+                    if (isPlaying) {
+                      audio.pause();
+                      personagem.classList.remove('playing');
+                      personagem.classList.add('personagem-parado');
+                    } else {
+                      audio.play();
+                      personagem.classList.remove('personagem-parado');
+                      personagem.classList.add('playing');
+                    }
+                    isPlaying = !isPlaying;
+                  });
+
+                  audio.addEventListener('ended', function () {
+                    isPlaying = false;
+                    personagem.classList.remove('playing');
+                    personagem.classList.add('personagem-parado');
+                  });
+                });
+              </script>
+
+            </div>
+
+            <img class="almond-package" src="../../img/hazelnut-packages.png" alt="hazelnut-package" />
+          </div>
+          <div class="product-intro-text">
+            <p>
+              Our hazelnut truffle is a divine combination of premium
+              chocolate and crunchy hazelnuts. Each bite is a rich and
+              unforgettable experience, with the unmistakable flavor of
+              chocolate and the delightful texture of hazelnuts. Made with
+              high-quality ingredients, it is the perfect choice for chocolate
+              and hazelnut lovers.
+            </p>
+            <p>
+              The Chocotchin Hazelnuts is ideal for a quick snack, to share
+              with family, or as a special gift. Hazelnuts, rich in nutrients,
+              combined with our carefully selected chocolate, create a harmony
+              of flavor and health that pleases all palates.
+            </p>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- informação nutricional -->
 
     <div class="image-and-table-container">
+
       <div class="product-image-container">
-        <img class="hazelnutNut" src="../../img/chocolate.png" alt="Chocotchin Hazelnuts" />
+        <img style="width: 400px; height: 610px" src="../../img/chocolate.png" alt="Chocotchin Hazelnuts" />
+
       </div>
 
-      <div class="nutritional-info">
-        <h2>Informação Nutricional</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Componente</th>
-              <th>Por 90 g</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Valor Energético</td>
-              <td>179 kcal (749 kJ)</td>
-            </tr>
-            <tr>
-              <td>Lipídios</td>
-              <td>10 g</td>
-            </tr>
-            <tr>
-              <td>– dos quais ácidos graxos saturados</td>
-              <td>5 g</td>
-            </tr>
-            <tr>
-              <td>– dos quais ácidos graxos trans</td>
-              <td>0 g</td>
-            </tr>
-            <tr>
-              <td>Carboidratos</td>
-              <td>40 g</td>
-            </tr>
-            <tr>
-              <td>– dos quais açúcares</td>
-              <td>2 g</td>
-            </tr>
-            <tr>
-              <td>– dos quais polióis</td>
-              <td>18 g</td>
-            </tr>
-            <tr>
-              <td>– dos quais açúcares adicionados</td>
-              <td>0 g</td>
-            </tr>
-            <tr>
-              <td>Fibra Alimentar</td>
-              <td>6 g</td>
-            </tr>
-            <tr>
-              <td>Proteínas</td>
-              <td>20 g</td>
-            </tr>
-            <tr>
-              <td>Sal (equivalente de sódio)</td>
-              <td>26 mg</td>
-            </tr>
-            <tr>
-              <td>Extrato de Ginseng Coreano</td>
-              <td>200 mg</td>
-            </tr>
-            <tr>
-              <td>– dos quais Total de Ginsenosídeos</td>
-              <td>40 mg</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="nutritional-title">
+
+        <div class="nutritional-info">
+          <h2>Nutritional Information</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  Component</th>
+                <th>Per 90 g</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              <tr>
+                <td>Energy Value</td>
+                <td>179 kcal (749 kJ)</td>
+              </tr>
+              <tr>
+                <td>Fats</td>
+                <td>10 g</td>
+              </tr>
+              <tr>
+                <td>– of which saturated fatty acids</td>
+                <td>5 g</td>
+              </tr>
+              <tr>
+                <td>– of which trans fatty acids</td>
+                <td>0 g</td>
+              </tr>
+              <tr>
+                <td>Carbohydrates</td>
+                <td>40 g</td>
+              </tr>
+              <tr>
+                <td>– of which sugars</td>
+                <td>2 g</td>
+              </tr>
+              <tr>
+                <td>– of which polyols</td>
+                <td>18 g</td>
+              </tr>
+              <tr>
+                <td>– of which added sugars</td>
+                <td>0 g</td>
+              </tr>
+              <tr>
+                <td>Dietary Fiber</td>
+                <td>6 g</td>
+              </tr>
+              <tr>
+                <td>Proteins</td>
+                <td>20 g</td>
+              </tr>
+              <tr>
+                <td>Salt (sodium equivalent)</td>
+                <td>26 mg</td>
+              </tr>
+              <tr>
+                <td>Korean Ginseng Extract</td>
+                <td>200 mg</td>
+              </tr>
+              <tr>
+                <td>– of which Total Ginsenosides</td>
+                <td>40 mg</td>
+              </tr>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
+    <!-- fim da tabela nutricional -->
+
   </main>
 
   <footer>
-    <p>&copy; AGORA ENVOLVIDO COM PAPEL 200% RECICLAVEL!!.</p>
+    <p>&copy; Sustainably wrapped in 200% recyclable paper!</p>
+          <a style="outline: none;
+  box-shadow: none; border: none; color: white; text-decoration: none;
+" href="https://www.instagram.com/chocotchin" target="_blank"><i class="fa-brands fa-instagram"></a></i><i class="fa-brands fa-facebook"></i
+      ><i class="fa-brands fa-x-twitter"></i>
+    </footer>
   </footer>
 </body>
 

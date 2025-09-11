@@ -1,54 +1,175 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chocotchin</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
+  <body>
     <header>
-
+      <img class="logo" src="img/head.png" alt="logo" />
     </header>
 
     <nav class="menu">
-        <div class="menu-item">
-            <a href="index.html"></a><span class="menu-title">Home</span></a>
-            </div>
-        </div>
+      <div class="menu-item">
+        <a href="index.html"><span class="menu-title">Home</span></a>
+      </div>
 
-        <div class="menu-item">
-            <span class="menu-title">Products</span>
-            <div class="dropdown-content">
-                <a href="html/products/hazelnut.html">Hazelnuts</a>
-                <a href="html/products/almond.html">Almond</a>
-                <a href="html/products/strawberry.html">Strawberry</a>
-            </div>
+      <div class="menu-item">
+        <span class="menu-title">Products</span>
+        <div class="dropdown-content">
+          <a href="html/products/hazelnut.html">Hazelnuts</a>
+          <a href="html/products/almond.html">Almond</a>
+          <a href="html/products/strawberry.html">Strawberry</a>
         </div>
+      </div>
 
-        <div class="menu-item">
-            <span class="menu-title">About us</span>
-            <div class="dropdown-content">
-                <a href="html/aboutUs/story.html">Story</a>
-                <a href="html/aboutUs/team.html">Team</a>
-            </div>
+      <div class="menu-item">
+        <span class="menu-title">About us</span>
+        <div class="dropdown-content">
+          <a href="html/aboutUs/story.html">Story</a>
         </div>
+      </div>
 
-        <div class="menu-item">
-            <a href="html/Contacts/contacts.html"></a><span class="menu-title">Contacts</span></a>
-            </div>
-        </div>
+      <div class="menu-item">
+        <a href="html/peopleWeLove.html">
+          <span class="menu-title">People we love</span>
+        </a>
+      </div>
     </nav>
 
-    <main class="content">
-        <h2>Welcome to our page!</h2>
-        <p>With Chocotchin your mouth will be watering.</p>
+    <main>
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1>The Flavor That Awakens Your Inner Glow</h1>
+          <p>
+            Discover our handcrafted chocolates, made with passion to brighten
+            your day.
+          </p>
+          <a href="#featured-products" class="hero-btn">Explore our flavors</a>
+        </div>
+      </section>
+
+      <section id="featured-products" class="featured-products-section">
+        <h2 class="section-title">Favorites</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <img src="img/hazelnut-packages.png" alt="Chocotchin de Avelã" />
+            <h3>Chocotchin Hazelnut</h3>
+            <p>
+              The classic and irresistible combination of creamy chocolate with
+              crunchy hazelnuts.
+            </p>
+            <a href="html/products/hazelnut.html" class="product-btn">More</a>
+          </div>
+          <div class="product-card">
+            <img src="img/almond-package.png" alt="Chocotchin de Amêndoa" />
+            <h3>Chocotchin Almond</h3>
+            <p>
+              The elegance of roasted almonds wrapped in our premium chocolate.
+            </p>
+            <a href="html/products/almond.html" class="product-btn">More</a>
+          </div>
+          <div class="product-card">
+            <img src="img/strawberry-package.png" alt="Chocotchin de Morango" />
+            <h3>Chocotchin Strawberry</h3>
+            <p>
+              An explosion of flavor with freeze-dried strawberry pieces and
+              white chocolate.
+            </p>
+            <a href="html/products/strawberry.html" class="product-btn">More</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="chocotchin-humor-section">
+        <h2 class="section-title">Don't Let Your Shine Fade!</h2>
+        <div class="humor-content-wrapper">
+          <img
+            class="humor-image"
+            src="img/ealexandreprofessor.jpg"
+            alt="Pessoa cansada por não comer Chocotchin"
+          />
+          <p class="humor-text">"No Chocotchin? No glow!!"</p>
+        </div>
+        <div class="additional-text">
+          <p>
+            Don’t miss out! Boost your happiness and energy with our delicious
+            products. Click on 'Products' and start exploring now!
+          </p>
+        </div>
+      </section>
+
+      <section class="ratings-section">
+        <h2 class="ratings-title">What Our Customers Say</h2>
+        <div class="ratings-grid">
+          <div class="rating-card">
+            <img
+              src="img/bolsomster.png"
+              alt="Foto do Cliente 1"
+              class="customer-photo"
+            />
+            <div class="rating-info">
+              <h3 class="customer-name">Jair Hamsternaro</h3>
+              <div class="star-rating">★★★★★</div>
+              <blockquote class="customer-comment">
+                "Simply the best chocolate I’ve ever tasted! The texture is
+                amazing and the flavor is unforgettable. Chocotchin has gained a
+                customer for life! Way better than ice cream and popcorn"
+              </blockquote>
+            </div>
+          </div>
+          <div class="rating-card">
+            <img
+              src="img/Edimster.png"
+              alt="Foto do Cliente 2"
+              class="customer-photo"
+            />
+            <div class="rating-info">
+              <h3 class="customer-name">Ed Squeeran</h3>
+              <div class="star-rating">★★★★★</div>
+              <blockquote class="customer-comment">
+                "Perfect for any time of the day. It gives you that extra boost
+                of energy with a flavor that warms the soul. I recommend it to
+                all my friends."
+              </blockquote>
+            </div>
+          </div>
+          <div class="rating-card">
+            <img
+              src="img/alexanmster.png"
+              alt="Foto do Cliente 3"
+              class="customer-photo"
+            />
+            <div class="rating-info">
+              <h3 class="customer-name">Xandhamster de Moraes</h3>
+              <div class="star-rating">★★★★★</div>
+              <blockquote class="customer-comment">
+                "From the packaging to the very last bite, everything is
+                impeccable. You can feel it’s made with care and quality
+                ingredients. Fantastic!"
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; CHOCOTCHIN NO CORAÇÃO.</p>
+      <p>&copy; CHOCOTCHIN IN YOUR HEART.</p>
+      <a style="outline: none;
+  box-shadow: none; border: none; color: white; text-decoration: none;
+" href="https://www.instagram.com/chocotchin" target="_blank"><i class="fa-brands fa-instagram"></a></i><i class="fa-brands fa-facebook"></i
+      ><i class="fa-brands fa-x-twitter"></i>
     </footer>
-
-</body>
+  </body>
 </html>

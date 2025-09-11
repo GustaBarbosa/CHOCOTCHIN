@@ -1,0 +1,198 @@
+#janela-modal {
+  padding-top: 150px;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: none;
+  max-height: fit-content;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.sem-rolagem {
+  overflow: hidden;
+}
+
+.conteudo-janela {
+  background-image: url("../img/lyrics-background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  text-align: center;
+  color: #333;
+
+  width: 600px; /* Mantém a largura fixa */
+  min-height: 600px; /* Define uma altura mínima, mas permite que cresça */
+  margin: 50px 50px;
+  padding: 300px 90px;
+}
+
+.conteudo-janela h2 {
+  padding-top: 0;
+  color: #4f280b;
+}
+
+.conteudo-janela p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.player-overplay {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.player-music {
+  display: flex; /* coloca as divs lado a lado */
+}
+
+#lyrics {
+  border: none;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+  height: calc(486px / 4); /* metade da altura */
+  width: calc(556px / 4); /* metade da largura de um frame */
+  /* Posicionamento para o elemento filho */
+  position: relative;
+  overflow: hidden; /* Garante que o span não "vaze" para fora do botão */
+}
+
+#lyrics img {
+  cursor: pointer;
+  height: calc(506px / 4); /* metade da altura */
+}
+
+.personagem-animado {
+  width: calc(532px / 4); /* metade da largura de um frame */
+  height: calc(506px / 4); /* metade da altura */
+  background-repeat: no-repeat;
+  background-size: calc(6672px / 4) auto; /* escala proporcional da spritesheet */
+  cursor: pointer;
+}
+
+/* Imagem parada */
+.personagem-parado {
+  background-image: url("../img/hamster-start.png");
+  background-size: cover;
+}
+
+/* Animação com spritesheet */
+.personagem-animado.playing {
+  background-image: url("../img/hazel-dance.png");
+  animation: animarPersonagem 5s steps(12) infinite;
+  background-size: calc(6384px / 4) auto; /* reduz a spritesheet proporcionalmente */
+}
+
+@keyframes animarPersonagem {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: calc(-6384px / 4) 0;
+  }
+}
+.product-intro-text p {
+  color: #4f280b;
+}
+/* --- CÓDIGO PARA RESPONSIVIDADE MÓVEL --- */
+
+/* Adicione estas regras dentro de uma media query.
+   Elas serão aplicadas apenas em ecrãs com largura máxima de 768px. */
+@media (max-width: 768px) {
+
+  /* 1. Cabeçalho (Header) */
+  header {
+    height: auto; /* Altura automática para se ajustar ao conteúdo */
+    padding: 20px 0; /* Adiciona um pouco de espaçamento */
+    flex-direction: column; /* Coloca o logo e o ingrediente um em cima do outro */
+  }
+
+  .logo {
+    width: 250px; /* Reduz o tamanho do logo em ecrãs pequenos */
+  }
+
+  .ingredient {
+    width: 80px; /* Reduz o tamanho do ingrediente */
+    margin-top: 15px;
+  }
+  
+  /* 2. Menu de Navegação */
+  .menu {
+    flex-direction: column; /* Transforma o menu horizontal em vertical */
+    height: auto; /* Altura automática para caber todos os itens */
+    padding: 10px 0;
+  }
+
+  .menu-item {
+    width: 100%; /* Faz cada item ocupar a largura total */
+    text-align: center; /* Centraliza o texto */
+    padding: 0.5rem 0;
+  }
+  
+  .dropdown-content {
+      position: static; /* Remove o posicionamento absoluto no mobile */
+      display: block; /* Garante que o dropdown esteja sempre visível */
+      opacity: 1;
+      transform: none;
+      box-shadow: none;
+      background-color: #69360f; /* Muda a cor para se destacar */
+      width: 100%;
+      border-radius: 0;
+  }
+
+  /* 3. Conteúdo Principal e Tabela Nutricional */
+  .content {
+    padding: 1rem; /* Reduz o padding em ecrãs pequenos */
+  }
+  
+  /* Container que segura a imagem e a tabela */
+  .image-and-table-container {
+    flex-direction: column; /* Coloca a imagem em cima da tabela */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .product-image-container img {
+    width: 100% !important; /* Força a imagem a ocupar 100% da largura do seu container */
+    max-width: 350px; /* Mas limita o tamanho máximo para não ficar gigante */
+    height: auto !important; /* Altura automática para manter a proporção */
+    margin-bottom: 30px; /* Adiciona espaço entre a imagem e a tabela */
+  }
+  
+  .nutritional-info table {
+      width: 100%; /* Faz a tabela ocupar toda a largura disponível */
+      font-size: 0.9em; /* Reduz um pouco o tamanho da fonte se necessário */
+  }
+
+  /* 4. Introdução do Produto */
+   .product-intro {
+     flex-direction: column; /* Empilha o player e o texto */
+     align-items: center;
+   }
+   
+   .almond-package {
+       max-width: 90%; /* Garante que a imagem da embalagem não ultrapasse a tela */
+       height: auto;
+       margin-top: 20px;
+   }
+   
+   .product-intro-text {
+       text-align: center; /* Centraliza o texto de introdução */
+       padding: 0 10px;
+   }
+
+  /* 5. Ícones do Rodapé */
+  footer .fa-brands {
+    margin: 0 10px; /* Adiciona um pouco mais de espaço entre os ícones */
+    font-size: 1.5em; /* Aumenta um pouco o tamanho para facilitar o clique */
+  }
+}
