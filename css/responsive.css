@@ -1,0 +1,203 @@
+/* ==========================================================================
+   ### ARQUIVO DE ESTILOS RESPONSIVOS - CHOCOTCHIN ###
+   Este arquivo contém TODAS as regras para ajustar o site em telas pequenas.
+   Ele é ativado apenas em telas com largura máxima de 768px.
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* ===================================
+     1. ESTILOS GLOBAIS (PARA TODAS AS PÁGINAS)
+     =================================== */
+/* ===================================
+     0. CORREÇÃO DE OVERFLOW (ANTI-ESPAÇO EM BRANCO)
+     =================================== */
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  /* --- Cabeçalho e Logo --- */
+  header {
+    height: auto; /* Altura flexível */
+    padding: 20px 0;
+    flex-direction: column; /* Empilha logo e ingrediente (nas páginas de produto) */
+  }
+
+  .logo {
+    width: 250px; /* Reduz o logo */
+    max-width: 70%;
+  }
+
+  /* --- Menu de Navegação --- */
+  .menu {
+    flex-direction: column; /* Empilha os itens do menu */
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .menu-item {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 0;
+  }
+
+  .dropdown-content {
+    position: static; /* Remove posicionamento absoluto no mobile */
+    display: none; /* Esconde por padrão para não poluir */
+    opacity: 1;
+    transform: none;
+    box-shadow: none;
+    background-color: #69360f; /* Cor de destaque para o submenu */
+    width: 100%;
+    border-radius: 0;
+  }
+
+  /* Mostra o dropdown quando o item do menu é "tocado" (hover) */
+  .menu-item:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    text-align: center;
+    padding: 12px;
+  }
+
+  /* --- Rodapé --- */
+  footer {
+    flex-direction: column;
+    gap: 15px; /* Espaço entre o texto e os ícones */
+  }
+
+  footer .fa-brands {
+    font-size: 1.6em; /* Ícones maiores para facilitar o toque */
+    margin: 0 12px;
+  }
+
+  /* ===================================
+     2. PÁGINA INICIAL (INDEX.HTML)
+     =================================== */
+  .hero-content h1 {
+    font-size: 2.2em;
+  }
+
+  .hero-content p {
+    font-size: 1.1em;
+  }
+
+  .products-grid,
+  .ratings-grid {
+    gap: 20px;
+  }
+
+  .product-card,
+  .rating-card {
+    width: 100% !important; /* Garante que sempre ocupe a largura total */
+    min-width: unset;
+  }
+
+  /* ===================================
+     3. PÁGINAS DE PRODUTO (GERAL)
+     =================================== */
+
+  /* Ingrediente flutuante */
+  .ingredient {
+    position: static !important; /* Remove a posição fixa */
+    width: 80px;
+    margin-top: 15px;
+    opacity: 1;
+  }
+
+  /* Conteúdo geral da página de produto */
+  main.content {
+    padding: 1rem;
+  }
+
+  .product-description-container h1 {
+    font-size: 2rem;
+  }
+
+  /* Seção de introdução (player + imagem da embalagem + texto) */
+  .product-intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centraliza todo o texto */
+    gap: 1.5rem;
+  }
+
+  .almond-package { /* Classe genérica para todas as embalagens */
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .product-intro-text {
+    font-size: 18px;
+  }
+
+  /* Seção da Tabela Nutricional */
+  .image-and-table-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  /* Corrige a imagem com tamanho fixo inline */
+  .product-image-container img[style] {
+    width: 100% !important;
+    max-width: 320px;
+    height: auto !important;
+    margin-bottom: 20px;
+  }
+
+  .nutritional-info {
+    width: 100%;
+    min-width: unset;
+    padding: 0;
+  }
+
+  .nutritional-info table {
+    font-size: 0.9em;
+  }
+
+  /* --- Janela Modal das Letras de Música --- */
+  #janela-modal {
+    padding: 20px 0; /* Espaço para rolagem */
+    align-items: flex-start; /* Alinha no topo para ver o início */
+  }
+
+  .conteudo-janela {
+    width: 95vw !important; /* Ocupa 95% da largura da tela */
+    height: auto !important; /* Altura automática */
+    min-height: unset !important;
+    margin: 0 auto !important;
+    padding: 25% 10% 15% 10% !important; /* Ajusta o padding para caber o texto */
+    background-size: 100% 100%; /* Estica o pergaminho para caber */
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  .conteudo-janela h2 {
+    font-size: 1.5em;
+  }
+
+  .conteudo-janela p {
+    font-size: 1em;
+  }
+
+
+  /* ===================================
+     4. PÁGINAS 'STORY' E 'PEOPLE WE LOVE'
+     =================================== */
+
+  /* A página People We Love já é responsiva, ótimo trabalho! */
+
+  /* Corrige a imagem com tamanho fixo inline na página Story */
+  .story-image[style] {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .story-text {
+    padding: 25px;
+  }
+}
